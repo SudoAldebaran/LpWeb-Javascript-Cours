@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Écriture d'une fonction avec arguments</title>
+  <meta charset="UTF-8">
+  <script>
+
+    a = 3;
+    b = 2;
+    var x = 8;
+
+    function multiplie(x) {
+
+      c = parseFloat(prompt("Veuillez saisir un chiffre"));
+
+      if (x == 8){
+        resultat = x * 3;
+      }
+      else if (c != null){
+        resultat = c * 3;
+      }
+
+      alert(resultat);
+
+    }
+
+  </script>
+</head>
+<body>
+
+<h1>Écriture d'une fonction avec arguments</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="multiplie(x)">Lancer la fonction</button></p>
+
+</body>
+</html>

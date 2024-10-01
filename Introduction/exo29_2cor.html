@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Écriture d'une fonction complexe</title>
+  <meta charset="UTF-8">
+  <script>
+function surfaceCercle() {
+	var rayon=prompt("Entrez le rayon du cercle : ");
+
+	return Math.PI*Math.pow(rayon,2);
+}
+
+function longueurCote(R, x) {
+	return Math.sqrt(2*R*(R+x));
+}
+
+function MParcourtLeCercle() {
+	// Il est nécessaire de définir explicitement R comme étant un nombre. Sinon, il est interprété comme une chaîne de caractères; il en est de même pour x, ce qui conduit à des incohérences dans le calcul de la longueur AM (Si R="1" R+x vaut alors... "11")
+	var R=Number(prompt("Entrez le rayon du cercle : "));
+
+	var x= new Array(R, R/2, 0, -R/2, -R);
+	var y=new Array(5);
+
+	y[0]=longueurCote(R,x[0]);
+	y[1]=longueurCote(R,x[1]);
+	y[2]=longueurCote(R,x[2]);
+	y[3]=longueurCote(R,x[3]);
+	y[4]=longueurCote(R,x[4]);
+	
+	// ou encore…
+	// y=x.map( el => longueurCote(R,el))
+
+	return y;
+}
+
+  </script>
+</head>
+<body>
+
+<h1>Écriture d'une fonction complexe</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="alert(MParcourtLeCercle())">Lancer la fonction</button></p>
+
+</body>
+</html>

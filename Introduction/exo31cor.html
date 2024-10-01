@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang⁼"fr">
+
+<head>
+  <title>Utilisation de while</title>
+  <meta charset="UTF-8">
+  <script>
+function testWhile() {
+	var chaine;
+
+	do {
+		chaine=prompt("Entrez une chaîne de caractères contenant le caractère \"");
+	}
+	while (chaine.indexOf("\"")==-1)
+
+	alert("La chaîne entrée est \""+chaine+"\"");
+}
+  </script>
+</head>
+<body>
+
+<h1>Utilisation de while</h1>
+
+<p>Cliquez sur le bouton pour lancer la&nbsp;fonction&thinsp;: <button onclick="testWhile()">Lancer la fonction</button></p>
+
+</body>
+</html>

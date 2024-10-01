@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <title>Écriture d'une fonction simple</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+        // <!--
+
+        function surface() {
+            longueur = parseFloat(prompt("Saisissez une longueur"));
+            
+            largeur = parseFloat(prompt("Sasissez une largeur"));
+
+            resultat = longueur * largeur;
+
+            alert("Votre rectangle fait " + resultat + "m2");
+        }
+
+        function perimetre() {
+            longueur = prompt("Saisissez une longueur");
+            largeur = prompt("Sasissez une largeur");
+
+            resultat = 2*(longueur * largeur);
+
+            alert("Votre rectangle fait " + resultat + "m de perimetre");
+        }
+
+
+        // -->
+    </script>
+</head>
+
+<body>
+
+    <h1>Écriture d'une fonction simple</h1>
+
+    <p>Cliquez sur le bouton pour calculer la surface d'un rectangle &nbsp;: <button onclick="surface()">Lancer la fonction</button>
+    </p>
+
+    <p>Cliquez sur le bouton pour calculer le périmetre d'un rectangle &nbsp;: <button onclick="perimetre()">Lancer la fonction</button>
+    </p>
+
+</body>
+
+</html>

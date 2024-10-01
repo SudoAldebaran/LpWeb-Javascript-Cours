@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Utilisation de while</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+  // <!--
+
+    function testWhile(){
+      chaine = prompt();
+      guillemet = "\"";
+
+      while(!chaine.includes(guillemet)){
+        chaine = prompt();
+      }
+      alert(chaine);
+    }
+
+  // -->
+  </script>
+</head>
+<body>
+
+<h1>Utilisation de while</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="testWhile()">Lancer la fonction</button></p>
+
+</body>
+</html>
