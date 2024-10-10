@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>D�claration d'objet</title>
+  <meta name="author" content="Unknown" >
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+  <script type="text/javascript">
+    function Test(){
+      let ajout = 4;
+
+      this.affiche = function(){
+        valeur = Number(document.getElementById("champSaisie").value);
+        window.alert("Champ + 4 = " + Number(valeur + 4));
+      } 
+    }
+
+    var test = new window.Test();
+  
+  </script>
+</head>
+<body>
+
+<p><label for="champSaisie">Saisissez un nombre&nbsp;: </label><input type="text" id="champSaisie"></p>
+<p><input type="submit" onclick="test.affiche();" value="Effectuer le calcul"/></p>
+
+</body>
+</html>

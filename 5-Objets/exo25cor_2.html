@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Déclaration d'objet</title>
+  <meta charset="UTF-8">
+  <script>
+
+	function Init()
+		{
+			test =
+			{
+				affiche:function()
+				{
+					let valeur=Number(document.getElementById("champSaisie").value);
+					window.alert("Champ+4 = "+Number(valeur+4));
+				},
+				prop: "départ"
+			}
+		}
+
+  </script>
+</head>
+<body onload="Init()">
+
+<p><label for="champSaisie">Saisissez un nombre&nbsp;: </label><input type="text" id="champSaisie"></p>
+<p><input type="submit" onclick="test.affiche()" value="Effectuer le calcul"/></p>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>D�claration d'objet</title>
+  <meta name="AUTHOR" content="Gilles Chagnon">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+  <script type="text/javascript">
+    // <!--
+
+    function Init() {
+      test = new Object;
+      test.affiche = function () {
+        let valeur = Number(document.getElementById("champSaisie").value);
+        window.alert("Champ + 4 = " + Number(valeur + 4));
+      }
+    }
+    // -->
+  </script>
+</head>
+
+<body onload="Init()">
+
+  <p><label for="champSaisie">Saisissez un nombre&nbsp;: </label><input type="text" id="champSaisie"></p>
+  <p><input type="submit" onclick="test.affiche()" value="Effectuer le calcul" /></p>
+
+</body>
+
+</html>
