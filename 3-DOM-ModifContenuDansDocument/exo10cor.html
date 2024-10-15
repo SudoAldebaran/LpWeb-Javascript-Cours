@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<title>Ajout et suppression de contenu</title>
+<script>
+
+	function ajout()
+		{
+
+			liste=document.getElementById("listecommissions");
+			texte=document.getElementById("course").value;
+			
+			nouveauli=document.createElement("li");
+			nouveauli.appendChild(document.createTextNode(texte));
+
+			liste.appendChild(nouveauli);
+
+		}
+		
+		function supprime()
+			{
+				liste=document.getElementById("listecommissions");			
+				
+				dernier=liste.lastElementChild;
+				liste.removeChild(dernier);
+			
+				//if (liste.lastChild.nodeType==3) liste.removeChild(liste.lastChild);			
+
+
+			}
+
+</script>
+
+</head>
+<body>
+
+<input type="text" id="course"><input type="button" value="ajout" onclick="ajout()"><input type="button" value="supprime" onclick="supprime()">
+
+<ul id="listecommissions">
+	<li>1kg de farine</li>
+	<li>un pack de lait</li>
+</ul>
+
+<p><a href="../modifs.html#exosupprime">Retour au cours</a></p>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<title>Ajout / Suppression d'éléments</title>
+	<meta charset="UTF-8">
+	<script>
+
+		function ajout() {
+			var commissions = document.getElementById('listecommissions');
+			var elt = document.createElement('li');
+
+			var inputText = document.getElementById('recherche');
+
+			var newtext = inputText.value;
+
+			if (newtext != "") {
+				elt.appendChild(document.createTextNode(newtext));
+				commissions.appendChild(elt);
+
+			} else {
+				alert("Champ vide !");
+			}
+
+		}
+
+		function supprimer() {
+			var elements = document.getElementById('listecommissions');
+			var eltsupp = elements.lastChild;
+
+			
+
+
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<input type="text" id="recherche" placeholder="rechercher">
+	<input type="button" id="bouton-ok" value="ok" onclick="ajout()">
+	<input type="button" id="bouton-supp" value="supprimer" onclick="supprimer()">
+
+	<ul id="listecommissions">
+		<li>1kg de farine</li>
+		<li>un pack de lait</li>
+	</ul>
+
+</body>
+
+</html>

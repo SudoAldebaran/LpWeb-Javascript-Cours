@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<title>Gestion d'événement avec les propriétés des objets éléments</title>
+<meta charset="UTF-8">
+<script>
+	function Init()
+		{
+			champ=document.getElementById("champsaisie");
+			valeurInitiale=champ.value;
+			var bouton_soumission=document.getElementById("soumet");
+			var bouton_raz=document.getElementById("raz");
+			
+			bouton_soumission.onclick=soumission;
+			bouton_raz.onclick=remise_a_zero;
+			
+		}
+		
+	function soumission(event)
+		{
+			alert("Le texte saisi est '"+champ.value+"'");
+		}	
+		
+	function remise_a_zero(event)
+		{
+			alert("RAZ");
+			champ.value=valeurInitiale;
+		}
+
+</script>
+
+</head>
+<body onload="Init()">
+
+<form action="" id="formulaire">
+	<input type="text" value="Mot quelconque" id="champsaisie">
+	<input type="button" id="soumet" value="Soumettre">
+	<input type="button" id="raz" value="Remise à zéro">
+</form>
+
+</body>
+</html>
